@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3animation</title>
+    <style>
+        .box {
+           background-color: red;
+           width: 40px;
+            height:40px;
+            animation-name: bounce;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes bounce {
+            0% {
+              border-radius: 0 0 0 0;
+              transform: rotate(0deg);
+              background-color: orange;
+
+            }
+            25% {
+              border-radius: 50% 0 0 0 ;
+              transform: rotate(90deg);
+              background-color: bisque;
+            }
+            50% {
+               border-radius: 50% 50% 0 0 ;
+               transform: rotate(125deg);
+               background-color: greenyellow;
+            }
+            75% {
+               border-radius: 50% 50% 50% 0;
+               transform: rotate(150deg);
+               background-color: brown;
+            }
+            100% {
+               border-radius: 50%;
+               transform: rotate(180deg);
+               background-color: blueviolet;
+            }
+        }
+
+
+    </style>
+</head>
+
+
+
+<body>
+  <div class="box">
+
+  </div>
+</body>
+</html>

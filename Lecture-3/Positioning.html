@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Elements</title>
+    <style>
+        .relativeparent {
+            height: 400px;
+            background-color: blue;
+            color: whitesmoke;
+
+        }
+        .relativeparent .child1 {
+            position: relative;
+            left: 150px;
+            top: 200px;
+            color: red;
+
+        }
+        .relativeparent .child2 {
+            position: relative;
+            left: 0;
+            top:  0;
+            color: whitesmoke;
+        }
+        .absoluteparent {
+            position: relative;
+            background-color: brown;
+            height:200px;
+        }
+        .absoluteparent .child1 {
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            color: greenyellow;
+        }
+        .absoluteparent .child2 {
+            position: absolute;
+            top: 80px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+  <div class="relativeparent">
+      <div class="child1">
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+
+      </div>
+      <div class="child2">
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+      </div>
+  </div>
+  <div class="absoluteparent">
+      <div class="child1">
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+
+      </div>
+      <div class="child2">
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+          Lorem ipsum dolor
+      </div>
+  </div>
+</body>
+</html>
