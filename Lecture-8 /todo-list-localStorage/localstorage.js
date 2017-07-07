@@ -1,15 +1,14 @@
 /**
  * Created by aayusharora on 6/22/17.
  */
-var todoList = localStorage.getItem('todo');
+var todoList = (localStorage.getItem('todo'));
     if(!todoList) {
         todoList = [];
         localStorage.setItem('todo', JSON.stringify(todoList));
     }
-
  window.onload = function () {
 
-
+     var clear=document.getElementById("clear");//clear button
     var todo = document.getElementById('todo'); //input
     var add = document.getElementById('add'); // button
     var output = document.getElementById('output'); //div
@@ -39,7 +38,7 @@ var todoList = localStorage.getItem('todo');
             var cont = '';
 
             for( var i=1; i< todoList.length; i++) {
-                var todo = '<input  class="checkstyle" type="text"' + ' value= ' + todoList[i] + '/>' ;
+                // var todo = '<input  class="checkstyle" type="text"' + ' value= ' + todoList[i] + '/>' ;
                 cont = cont + '<input ' +
                         (todoList[i].done? "checked": "" )  +
                      ' onchange="setDone(this)" '+  ' id=' + i  + ' type="checkbox"/>' + '<input type="text"' + ' value= ' +
@@ -49,9 +48,16 @@ var todoList = localStorage.getItem('todo');
 
         }
 
+     clear.onclick=function() {
+         localStorage.clear();
+         output.innerHTML='';
+         todoList=[];
+     };
+
     };
 
     function setDone(el) {
         todoList[el.id].done = el.checked;
         localStorage.setItem('todo',JSON.stringify(todoList));
-    }
+    };
+
