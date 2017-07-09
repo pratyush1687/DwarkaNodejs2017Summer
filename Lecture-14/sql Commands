@@ -1,0 +1,20 @@
+## SQL Cheat sheet
+
+1. mysql -u root -p
+2. show databases;
+
+3. create user ’some username’@‘%’ identified by ‘somepassword’;
+
+4. grant all privileges on database.* to some username;
+
+5.  exit
+
+6. mysql -u someusername -p
+
+7. show databases;
+
+8. Use db;
+9. create table todos (id integer primary key auto_increment, task varchar(10), done boolean);
+10. insert into todos (task, done) values (‘task1’,1);
+11. update todos set done=1 where id =1
+12.  delete from todos where id =2;
